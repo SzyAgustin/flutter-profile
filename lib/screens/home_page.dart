@@ -5,13 +5,13 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onHorizontalDragEnd: (DragEndDetails details) {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ProfileView()),
-                  );
-                },
-          child: SafeArea(
+      onDoubleTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => ProfileView()),
+        );
+      },
+      child: SafeArea(
         child: Scaffold(
           appBar: AppBar(
             title: Text("Home Page"),
