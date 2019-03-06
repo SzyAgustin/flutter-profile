@@ -8,8 +8,11 @@ class ProfileView extends StatefulWidget {
 class _ProfileViewState extends State<ProfileView> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return SafeArea(
+      child: Scaffold(
+          appBar: AppBar(
+        title: Text("My Profile"),
+      )),
     );
   }
 }
